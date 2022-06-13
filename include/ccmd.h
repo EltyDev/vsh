@@ -1,12 +1,10 @@
 #ifndef CCMD_H_
-    #define CCMD_H_
+#define CCMD_H_
     
-    #include <stdlib.h>
-    #include "shell.h"
+#include <stdlib.h>
+#include "shell.h"
+#include <unistd.h>
 
-typedef struct  custom_cmd_s {
-    char *name;
-    int (*function)(char **);
-} custom_cmd_t;
+void is_custom_command(shell_t *shell, char *command);
 
 #endif

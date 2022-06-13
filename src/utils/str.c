@@ -37,10 +37,20 @@ int str_find(char const *str, char const *sub_str)
     return (-1);
 }
 
-int str_contain(char const *str, char const c)
+bool str_contain(char const *str, char const c)
 {
     for (int i = 0; str[i]; i++)
         if (str[i] == c)
             return (1);
     return (0);
+}
+
+int str_count(char const *str, char const c)
+{
+    int count = 0;
+
+    for (int i = 0; str[i]; i++)
+        if (str[i] == c)
+            count++;
+    return (count);
 }
